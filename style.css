@@ -1,0 +1,285 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black; /* Fallback background */
+    color: #f1f1f1;
+    text-align: center;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    animation: movingBackground 8s infinite alternate ease-in-out;
+}
+
+/* Smooth Live Changing Background */
+@keyframes movingBackground {
+    0% {
+        background: linear-gradient(45deg, black, rgb(213, 83, 154), rgb(142, 182, 50));
+    }
+    50% {
+        background: linear-gradient(45deg, red, rgb(115, 95, 217), rgb(229, 138, 53));
+    }
+    100% {
+        background: linear-gradient(45deg, rgb(87, 160, 168), black, red);
+    }
+}
+
+/* Custom Cursor */
+body, button, a {
+    cursor: none;
+}
+
+.cursor {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgba(65, 65, 68, 0.8);
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+}
+
+.cursor-hover {
+    transform: scale(1.5);
+    background-color: rgba(205, 29, 161, 0.8);
+}
+
+/* Header */
+header {
+    background: rgba(0, 8, 2, 0.9);
+    color: rgb(184, 140, 140);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+header:hover {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 8px 14px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sections Spacing */
+section {
+    padding: 120px 20px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding: 20px;
+
+    .profile-photo {
+        width: 200px; /* Adjust size as needed */
+        height: 200px;
+        border-radius: 600%; /* Makes it circular */
+        display: block;
+        margin: 10px auto; /* Centers the image */
+        border: 3px solid #8f2a2a; /* Optional border */
+    }
+    
+    
+
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+
+
+    
+}
+
+.hero h1:hover {
+    color: #01000c;
+}
+
+.animated-text {
+    color: #d1bc34;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skills-container img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skills-container img:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0px 4px 10px rgba(158, 235, 185, 0.3);
+}
+
+/* Certificates */
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.certificate-card {
+    padding: 15px 20px;
+    background: #ffffff;
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    transform: scale(1);
+}
+
+.certificate-card:hover {
+    background: #ff3366;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Projects */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.project-card:hover {
+    background: rgba(212, 29, 108, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+#contact a {
+    color: #72c243;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ff3366;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #222;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        transition: background 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.show {
+        display: flex;
+    }
+}
